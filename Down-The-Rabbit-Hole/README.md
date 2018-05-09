@@ -63,5 +63,7 @@ Use:
 cookiecutter gh:mkrapp/cookiecutter-reproducible-science
 ```
 
+Also check out [recipy](https://github.com/recipy/recipy).  Effortless method to record provenance in Python
+
 This could be a really good tool for us to use.
 

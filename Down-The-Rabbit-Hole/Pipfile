@@ -1,7 +1,7 @@
 [[source]]
 
 url = "https://pypi.python.org/simple"
-verify_ssl = true
+verify_ssl = false
 name = "pypi"
 
 
@@ -11,6 +11,7 @@ pandas = "*"
 numpy = "*"
 matplotlib = "*"
 cookiecutter = "*"
+recipy = "*"
 
 
 [dev-packages]

@@ -4,12 +4,22 @@ Module containing the functions to subset the data
 according to a given country name
 """
 
-import sys
 import datetime
+import sys
 
-import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+
+def get_country_df(filename, country):
+    # Load table
+    wine = pd.read_csv(filename)
+
+    # Use the country name to subset data
+    subset_country_df = wine[wine["country"] == country].copy()
+
+    return subset_country_df
 
 
 def get_country(filename, country):
@@ -28,28 +38,30 @@ def get_country(filename, country):
         Path to the created data set
     """
 
-    # Load table
-    wine = pd.read_csv(filename)
-
-    # Use the country name to subset data
-    subset_country = wine[wine['country'] == country ].copy()
-
     # Subset the
-
+    subset_country_df = get_country_df(filename, country)
     # Constructing the fname
-    today = datetime.datetime.today().strftime('%Y-%m-%d')
-    fname = f'data/processed/{today}-winemag_{country}.csv'
+    today = datetime.datetime.today().strftime("%Y-%m-%d")
+    fname = f"data/processed/{today}-winemag_{country}.csv"
 
     # Saving the csv
-    subset_country.to_csv(fname)
+    subset_country_df.to_csv(fname)
 
-    return(fname)
+    return (fname)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     filename = sys.argv[1]
     country = sys.argv[2]
-    print(f'Subsetting: {filename}')
-    print(f'Country searched: {country}')
+    print(f"Subsetting: {filename}")
+    print(f"Country searched: {country}")
 
     print(get_country(filename, country))
+
+
+def get_mean_price(filename):
+    """ function to get the mean price of the wines
+    rounded to 4 decimals"""
+    wine = pd.read_csv(filename)
+    mean_price = wine["price"].mean()
+    return round(mean_price, 4)  # note the rounding here
