@@ -4,12 +4,17 @@ Module contaning the functions to visualize the
 wines distribution using a subset data
 """
 
+import os
 import sys
 import datetime
 
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+
+FIGURE_SAVE_PATH = "reports/figures"
+if not os.path.isdir(FIGURE_SAVE_PATH):
+    os.makedirs(FIGURE_SAVE_PATH)
 
 def create_plots(filename):
     """
@@ -49,8 +54,8 @@ def plot_distribution(wine):
     ax.set_title('Distribution of Wine scores:  $\mu=88$, $\sigma=3$')
     ax.set_ylabel('Probability density')
     ax.set_xlabel('Points');
-
-    fname = f'reports/figures/fig01_distribution-wine-scores.png'
+        
+    fname = f'{FIGURE_SAVE_PATH}/fig01_distribution-wine-scores.png'
 
     fig.savefig(fname, bbox_inches = 'tight')
     return (fname)
@@ -65,7 +70,7 @@ def plot_scatter(wine):
     ax.set_ylabel('Price USD')
     ax.set_xlabel('Points')
 
-    fname = f'reports/figures/fig02_scatter-points-vs-price.png'
+    fname = f'{FIGURE_SAVE_PATH}/fig02_scatter-points-vs-price.png'
     fig.savefig(fname, bbox_inches = 'tight')
     return (fname)
 
