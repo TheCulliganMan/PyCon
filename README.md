@@ -19,6 +19,11 @@ Not that useful, but kind of interestings
 
 ### NetworkX + NXVis
 
-Extremely useful. With many practical examples.
+Extremely useful. With many practical examples.  I think we need a graph database.  Bonus notebook three 
+could be a lifesaver in Alex's project.
 
-* NOTEBOOK 5!!!! *
+* NOTEBOOK 5!!!! BONUS NOTEBOOK 3 *
+
+### Using Pandas For Better (Or Worse) 
+
+You already know all of this.  If you don't somebody else in the group does.  Probably not worth your time.
