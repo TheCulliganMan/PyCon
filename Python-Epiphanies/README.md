@@ -8,7 +8,7 @@ presented at PyCon 2018 by Stuart Williams
 This is an updated and reorganized version of the Python Epiphanies
 O'Reilly video at http://shop.oreilly.com/product/06369200
 
-This shows you all of pythons major quirks, how to intruduce them and thereby how to avoid running into them.
+This shows you all of pythons major quirks, how to intruduce them and thereby how to avoid running into them.  There aren't a whole lot of notes for this one, it is best to run in order and figure out what is happening by sight.
 
 This in particular blew my mind.
 
