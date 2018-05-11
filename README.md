@@ -38,3 +38,12 @@ gains against single threaded code and 5x gains against multiprocessed code.  It
 
 ## Performance Python: Seven Strategies for Optimizing your Numerical Code
 
+Useful ways to improve performance on numerical and data frame structured code.
+
+
+## "WHAT IS THIS MESS?" - Writing tests for pre-existing code bases
+
+Testing code.  This guy is a bit militant, but it is useful.  He describes how to integrate CI/CD into code bases.  FrateMatcher comes to mind.
+
+
+

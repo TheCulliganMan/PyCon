@@ -1,0 +1,43 @@
+# "WHAT IS THIS MESS?" - Writing tests for pre-existing code bases
+
+## [Justin Crown](https://github.com/mrname)
+
+### Takeaways:
+
+Legacy code can be new code or old code.  It is just lazy code that doesn't have tests or proper framework.
+
+Unit tests can help refresh you and rediscover how your own code works
+
+### Rules:
+
+* Only test what you touch
+* The first test is the hardest
+* Use preexisting tools
+
+* Tools:
+  * pytest
+  * pytest-socket
+  * pytest-cov
+  * factory_boy # avoid mode
+
+#### Notes:
+
+* Unittests cover the smallest units of codes they possibly can (otherwise people won't run them)
+* They should try to avoid using databases or external files.
+* Disable sockets (pytest-socket) in pytest to make sure it doesn't change real data or email stuff out.
+
+On inheritance of existing code.
+
+1. Don't touch anything.
+  * READ AND COMPREHEND * FIRST *
+2. Write unit test for existing function
+  * subclasses are really useful.  You can override methods and attributes with mock objects.
+  * patch objects -- look into them.
+  * add docstrings.
+  * add comments.
+  * be careful of inplace mutations.  Maybe you can fix it one day, but it isn't usually a good idea to change stuff like that.
+  * maybe you can add an argument or property without breaking things, that way you can use it without breaking everything.
+  * mock vs refactor.
+    * mock can get brittle
+    * refactor can break things
+3. Write unit test for *new* functionality.
