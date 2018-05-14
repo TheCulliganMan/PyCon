@@ -23,3 +23,5 @@ In Comes Graph QL:
 3. Schema
 2. UI and API
 1. Product
+
+# This talk was not worth it.
